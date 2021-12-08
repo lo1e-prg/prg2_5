@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
+:root {
+    --lcd-background: #00f6f6;
+    --lcd-crystal: #003434;
+}
+html {
+    background: #000;
+}
+
+#clock {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 993px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--lcd-background);
+    display: flex;
+}
+
+#clock .digits {
+    display: flex;
+}
+
+#clock .digit {
+    position: relative;
+    height: 268px;
+    width: 140px;
+    margin-left: 10px;
+}
+
+#clock .separator {
+    position: relative;
+    width: 20px;
+    margin-left: 10px;
+}
+
+#clock .separator .dot {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: var(--lcd-crystal);
+}
+
+#clock .separator .dot:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: var(--lcd-crystal);
+}
+
+#clock .separator .dot.upper {
+    top: 50px;
+}
+
+#clock .separator .dot.lower {
+    top: 170px;
+}
+
+.horizontal.bar {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    margin-left: 20px;
+    background: var(--lcd-crystal);
+}
+
+.horizontal.bar::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    width: 0;
+    border-right: 10px solid var(--lcd-crystal);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.horizontal.bar::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: 0;
+    border-left: 10px solid var(--lcd-crystal);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.vertical.bar {
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    margin-top: 20px;
+    background: var(--lcd-crystal);
+}
+.vertical.bar:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    width: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--lcd-crystal);
+}
+.vertical.bar:after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--lcd-crystal);
+}
+
+div[id^="block-hour-"],
+div[id^="block-minute-"],
+div[id^="block-second-"] {
+    margin-left: 10px;
+}
+
+#clock .hbar-1 {
+    top: 0;
+    left: 0;
+}
+
+#clock .hbar-2 {
+    top: 120px;
+    left: 0;
+
+}
+
+#clock .hbar-3 {
+    top: 240px;
+    left: 0;
+}
+
+#clock .vbar-1 {
+    top: 0;
+    left: 0;
+}
+
+#clock .vbar-2 {
+    top: 0;
+    left: 120px;
+}
+
+#clock .vbar-3 {
+    top: 120px;
+    left: 0;
+}
+
+#clock .vbar-4 {
+    top: 120px;
+    left: 120px;
+}
+
+#clock .horizontal.bar, 
+#clock .vertical.bar {
+    /* display: block; */
+}
