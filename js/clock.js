@@ -46,7 +46,6 @@ function drawDigit(idPrefix, digit) {
             document.getElementById(idPrefix + "-hbar-2").style.display = "block";
             document.getElementById(idPrefix + "-hbar-3").style.display = "block";
             document.getElementById(idPrefix + "-vbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-2").style.display = "block";
             document.getElementById(idPrefix + "-vbar-3").style.display = "block";
             document.getElementById(idPrefix + "-vbar-4").style.display = "block";
             break;
@@ -76,14 +75,18 @@ function drawDigit(idPrefix, digit) {
 }
 
 function startClock() {
-    drawDigit('hour-1', 0);
-    drawDigit('hour-2', 0);
-    drawDigit('minute-1', 0);
-    drawDigit('minute-2', 0);
+    testDigits();
+    setInterval(drawClock, 1000);
+ }
+
+ function testDigits() {
+    drawDigit('hour-1', 1);
+    drawDigit('hour-2', 6);
     drawDigit('second-1', 0);
     drawDigit('second-2', 0);
- 
-    setInterval(drawClock, 1000);
+    drawDigit('minute-1', 2);
+    drawDigit('minute-2', 0);
+    setTimeout(drawClock, 60);
  }
  
  function resetDigits() {
@@ -95,7 +98,7 @@ function startClock() {
 
 function drawClock() {
     let now = new Date();
-
+    
     resetDigits();
 
     drawHours(now);
