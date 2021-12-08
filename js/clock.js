@@ -88,7 +88,9 @@ function drawDigit(idPrefix, digit) {
     }
 }
 
-function drawDigits(part, digits) {
+function drawDigits(part, number) {
+    let digits = digitsOf(number);
+
     if (digits.length > 1) {
         drawDigit(part + "-1", digits[0]);
         drawDigit(part + "-2", digits[1]);
@@ -132,42 +134,9 @@ function drawClock() {
 
     resetDigits();
 
-    drawHours(now);
-    drawMinutes(now);
-    drawSeconds(now);
-}
-
-function drawSeconds(time) {
-    let seconds = digitsOf(time.getSeconds());
-
-    if (seconds.length > 1) {
-        drawDigit("second-1", seconds[0]);
-        drawDigit("second-2", seconds[1]);
-    } else {
-        drawDigit("second-2", seconds[0]);
-    }
-}
-
-function drawMinutes(time) {
-    let minutes = digitsOf(time.getMinutes());
-
-    if (minutes.length > 1) {
-        drawDigit("minute-1", minutes[0]);
-        drawDigit("minute-2", minutes[1]);
-    } else {
-        drawDigit("minute-2", minutes[0]);
-    }
-}
-
-function drawHours(time) {
-    let hours = digitsOf(time.getHours());
-
-    if (hours.length > 1) {
-        drawDigit("hour-1", hours[0]);
-        drawDigit("hour-2", hours[1]);
-    } else {
-        drawDigit("hour-2", hours[0]);
-    }
+    drawDigits('hour', now.getHours());
+    drawDigits('minute', now.getMinutes());
+    drawDigits('second', now.getSeconds());
 }
 
 /**
