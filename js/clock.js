@@ -1,111 +1,131 @@
-
-
 function drawDigit(idPrefix, digit) {
     switch (digit) {
         case 0:
-            drawCrystal(idPrefix, 'hbar-1');
-            drawCrystal(idPrefix, 'hbar-3');
-        
-            drawCrystal(idPrefix, 'vbar-1');
-            drawCrystal(idPrefix, 'vbar-2');
-            drawCrystal(idPrefix, 'vbar-3');
-            drawCrystal(idPrefix, 'vbar-4');
+            drawCrystals(idPrefix, [
+                "hbar-1",
+                "hbar-3",
+                "vbar-1",
+                "vbar-2",
+                "vbar-3",
+                "vbar-4",
+            ]);
             break;
         case 1:
-            drawCrystal(idPrefix, 'vbar-2');
-            drawCrystal(idPrefix, 'vbar-4');
+            drawCrystals(idPrefix, [
+                "vbar-2", 
+                "vbar-4"
+            ]);
             break;
         case 2:
-            drawCrystal(idPrefix, 'hbar-1');
-            drawCrystal(idPrefix, 'hbar-2');
-            drawCrystal(idPrefix, 'hbar-3');
-        
-            drawCrystal(idPrefix, 'vbar-2');
-            drawCrystal(idPrefix, 'vbar-3');
+            drawCrystals(idPrefix, [
+                "hbar-1",
+                "hbar-2",
+                "hbar-3",
+                "vbar-2",
+                "vbar-3",
+            ]);
             break;
         case 3:
-            drawCrystal(idPrefix, 'hbar-1');
-            drawCrystal(idPrefix, 'hbar-2');
-            drawCrystal(idPrefix, 'hbar-3');
-        
-            drawCrystal(idPrefix, 'vbar-2');
-            drawCrystal(idPrefix, 'vbar-4');
+            drawCrystals(idPrefix, [
+                "hbar-1",
+                "hbar-2",
+                "hbar-3",
+                "vbar-2",
+                "vbar-4",
+            ]);
             break;
         case 4:
-            drawCrystal(idPrefix, 'hbar-2');
-        
-            drawCrystal(idPrefix, 'vbar-1');
-            drawCrystal(idPrefix, 'vbar-2');
-            drawCrystal(idPrefix, 'vbar-4');
+            drawCrystals(idPrefix, [
+                "hbar-2", 
+                "vbar-1", 
+                "vbar-2", 
+                "vbar-4"
+            ]);
             break;
         case 5:
-            drawCrystal(idPrefix, 'hbar-1');
-            drawCrystal(idPrefix, 'hbar-2');
-            drawCrystal(idPrefix, 'hbar-3');
-        
-            drawCrystal(idPrefix, 'vbar-1');
-            drawCrystal(idPrefix, 'vbar-4');
+            drawCrystals(idPrefix, [
+                "hbar-1",
+                "hbar-2",
+                "hbar-3",
+                "vbar-1",
+                "vbar-4",
+            ]);
             break;
         case 6:
-            drawCrystal(idPrefix, 'hbar-1');
-            drawCrystal(idPrefix, 'hbar-2');
-            drawCrystal(idPrefix, 'hbar-3');
-        
-            drawCrystal(idPrefix, 'vbar-1');
-            drawCrystal(idPrefix, 'vbar-3');
-            drawCrystal(idPrefix, 'vbar-4');
+            drawCrystals(idPrefix, [
+                "hbar-1",
+                "hbar-2",
+                "hbar-3",
+                "vbar-1",
+                "vbar-3",
+                "vbar-4",
+            ]);
             break;
         case 7:
-            drawCrystal(idPrefix, 'hbar-1');
-            
-            drawCrystal(idPrefix, 'vbar-2');
-            drawCrystal(idPrefix, 'vbar-4');
+            drawCrystals(idPrefix, ["hbar-1", "vbar-2", "vbar-4"]);
             break;
         case 8:
-            drawCrystal(idPrefix, 'hbar-1');
-            drawCrystal(idPrefix, 'hbar-2');
-            drawCrystal(idPrefix, 'hbar-3');
-        
-            drawCrystal(idPrefix, 'vbar-1');
-            drawCrystal(idPrefix, 'vbar-2');
-            drawCrystal(idPrefix, 'vbar-3');
-            drawCrystal(idPrefix, 'vbar-4');
+            drawCrystals(idPrefix, [
+                "hbar-1",
+                "hbar-2",
+                "hbar-3",
+                "vbar-1",
+                "vbar-2",
+                "vbar-3",
+                "vbar-4",
+            ]);
             break;
         case 9:
-            drawCrystal(idPrefix, 'hbar-1');
-            drawCrystal(idPrefix, 'hbar-2');
-            drawCrystal(idPrefix, 'hbar-3');
-        
-            drawCrystal(idPrefix, 'vbar-1');
-            drawCrystal(idPrefix, 'vbar-2');
-            drawCrystal(idPrefix, 'vbar-4');
+            drawCrystals(idPrefix, [
+                "hbar-1",
+                "hbar-2",
+                "hbar-3",
+                "vbar-1",
+                "vbar-2",
+                "vbar-4",
+            ]);
             break;
     }
 }
 
+function drawDigits(part, digits) {
+    if (digits.length > 1) {
+        drawDigit(part + "-1", digits[0]);
+        drawDigit(part + "-2", digits[1]);
+    } else {
+        drawDigit(part + "-2", digits[0]);
+    }
+}
+
+function drawCrystals(idPrefix, bars) {
+    for (let index = 0; index < bars.length; index++) {
+        let bar = bars[index];
+        drawCrystal(idPrefix, bar);
+    }
+}
 
 function drawCrystal(idPrefix, bar) {
-    let id = idPrefix + '-' + bar;
+    let id = idPrefix + "-" + bar;
     document.getElementById(id).style.display = "block";
 }
 
 function startClock() {
-    drawDigit('hour-1', 0);
-    drawDigit('hour-2', 0);
-    drawDigit('minute-1', 0);
-    drawDigit('minute-2', 0);
-    drawDigit('second-1', 0);
-    drawDigit('second-2', 0);
- 
+    drawDigit("hour-1", 0);
+    drawDigit("hour-2", 0);
+    drawDigit("minute-1", 0);
+    drawDigit("minute-2", 0);
+    drawDigit("second-1", 0);
+    drawDigit("second-2", 0);
+
     setInterval(drawClock, 1000);
- }
- 
- function resetDigits() {
-     let bars = document.getElementById('clock').getElementsByClassName('bar');
-     for(let index = 0; index < bars.length; index++){
-         bars[index].style.display = "none";
-     }
-  }
+}
+
+function resetDigits() {
+    let bars = document.getElementById("clock").getElementsByClassName("bar");
+    for (let index = 0; index < bars.length; index++) {
+        bars[index].style.display = "none";
+    }
+}
 
 function drawClock() {
     let now = new Date();
@@ -119,47 +139,47 @@ function drawClock() {
 
 function drawSeconds(time) {
     let seconds = digitsOf(time.getSeconds());
-    
-    if(seconds.length > 1) {
-        drawDigit('second-1', seconds[0]);
-        drawDigit('second-2', seconds[1]);
-    } else {
-        drawDigit('second-2', seconds[0]);
-    }
 
+    if (seconds.length > 1) {
+        drawDigit("second-1", seconds[0]);
+        drawDigit("second-2", seconds[1]);
+    } else {
+        drawDigit("second-2", seconds[0]);
+    }
 }
 
 function drawMinutes(time) {
     let minutes = digitsOf(time.getMinutes());
-    
-    if(minutes.length > 1) {
-        drawDigit('minute-1', minutes[0]);
-        drawDigit('minute-2', minutes[1]);
-    } else {
-        drawDigit('minute-2', minutes[0]);
-    }
 
+    if (minutes.length > 1) {
+        drawDigit("minute-1", minutes[0]);
+        drawDigit("minute-2", minutes[1]);
+    } else {
+        drawDigit("minute-2", minutes[0]);
+    }
 }
 
 function drawHours(time) {
     let hours = digitsOf(time.getHours());
-    
-    if(hours.length > 1) {
-        drawDigit('hour-1', hours[0]);
-        drawDigit('hour-2', hours[1]);
-    } else {
-        drawDigit('hour-2', hours[0]);
-    }
 
+    if (hours.length > 1) {
+        drawDigit("hour-1", hours[0]);
+        drawDigit("hour-2", hours[1]);
+    } else {
+        drawDigit("hour-2", hours[0]);
+    }
 }
 
 /**
- * 
+ *
  * @param {Number} number Any number
  * @returns Array<Number>
  */
 function digitsOf(number) {
-    return number.toString().split('').map((digit) => parseInt(digit))
+    return number
+        .toString()
+        .split("")
+        .map((digit) => parseInt(digit));
 }
 
-window.addEventListener('load', startClock);
+window.addEventListener("load", startClock);
