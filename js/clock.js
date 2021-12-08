@@ -3,76 +3,90 @@
 function drawDigit(idPrefix, digit) {
     switch (digit) {
         case 0:
-            document.getElementById(idPrefix + "-hbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-3").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-3").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-4").style.display = "block";
+            drawCrystal(idPrefix, 'hbar-1');
+            drawCrystal(idPrefix, 'hbar-3');
+        
+            drawCrystal(idPrefix, 'vbar-1');
+            drawCrystal(idPrefix, 'vbar-2');
+            drawCrystal(idPrefix, 'vbar-3');
+            drawCrystal(idPrefix, 'vbar-4');
             break;
         case 1:
-            document.getElementById(idPrefix + "-vbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-4").style.display = "block";
+            drawCrystal(idPrefix, 'vbar-2');
+            drawCrystal(idPrefix, 'vbar-4');
             break;
         case 2:
-            document.getElementById(idPrefix + "-hbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-3").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-3").style.display = "block";
+            drawCrystal(idPrefix, 'hbar-1');
+            drawCrystal(idPrefix, 'hbar-2');
+            drawCrystal(idPrefix, 'hbar-3');
+        
+            drawCrystal(idPrefix, 'vbar-2');
+            drawCrystal(idPrefix, 'vbar-3');
             break;
         case 3:
-            document.getElementById(idPrefix + "-hbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-3").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-4").style.display = "block";
+            drawCrystal(idPrefix, 'hbar-1');
+            drawCrystal(idPrefix, 'hbar-2');
+            drawCrystal(idPrefix, 'hbar-3');
+        
+            drawCrystal(idPrefix, 'vbar-2');
+            drawCrystal(idPrefix, 'vbar-4');
             break;
         case 4:
-            document.getElementById(idPrefix + "-hbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-4").style.display = "block";
+            drawCrystal(idPrefix, 'hbar-2');
+        
+            drawCrystal(idPrefix, 'vbar-1');
+            drawCrystal(idPrefix, 'vbar-2');
+            drawCrystal(idPrefix, 'vbar-4');
             break;
         case 5:
-            document.getElementById(idPrefix + "-hbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-3").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-4").style.display = "block";
+            drawCrystal(idPrefix, 'hbar-1');
+            drawCrystal(idPrefix, 'hbar-2');
+            drawCrystal(idPrefix, 'hbar-3');
+        
+            drawCrystal(idPrefix, 'vbar-1');
+            drawCrystal(idPrefix, 'vbar-4');
             break;
         case 6:
-            document.getElementById(idPrefix + "-hbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-3").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-3").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-4").style.display = "block";
+            drawCrystal(idPrefix, 'hbar-1');
+            drawCrystal(idPrefix, 'hbar-2');
+            drawCrystal(idPrefix, 'hbar-3');
+        
+            drawCrystal(idPrefix, 'vbar-1');
+            drawCrystal(idPrefix, 'vbar-3');
+            drawCrystal(idPrefix, 'vbar-4');
             break;
         case 7:
-            document.getElementById(idPrefix + "-hbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-4").style.display = "block";
+            drawCrystal(idPrefix, 'hbar-1');
+            
+            drawCrystal(idPrefix, 'vbar-2');
+            drawCrystal(idPrefix, 'vbar-4');
             break;
         case 8:
-            document.getElementById(idPrefix + "-hbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-3").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-3").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-4").style.display = "block";
+            drawCrystal(idPrefix, 'hbar-1');
+            drawCrystal(idPrefix, 'hbar-2');
+            drawCrystal(idPrefix, 'hbar-3');
+        
+            drawCrystal(idPrefix, 'vbar-1');
+            drawCrystal(idPrefix, 'vbar-2');
+            drawCrystal(idPrefix, 'vbar-3');
+            drawCrystal(idPrefix, 'vbar-4');
             break;
         case 9:
-            document.getElementById(idPrefix + "-hbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-hbar-3").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-1").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-2").style.display = "block";
-            document.getElementById(idPrefix + "-vbar-4").style.display = "block";
+            drawCrystal(idPrefix, 'hbar-1');
+            drawCrystal(idPrefix, 'hbar-2');
+            drawCrystal(idPrefix, 'hbar-3');
+        
+            drawCrystal(idPrefix, 'vbar-1');
+            drawCrystal(idPrefix, 'vbar-2');
+            drawCrystal(idPrefix, 'vbar-4');
             break;
     }
+}
+
+
+function drawCrystal(idPrefix, bar) {
+    let id = idPrefix + '-' + bar;
+    document.getElementById(id).style.display = "block";
 }
 
 function startClock() {
