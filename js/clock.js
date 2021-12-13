@@ -18,20 +18,12 @@ function startClock() {
 window.addEventListener("load", startClock);
 
 function testClock() {
-    document.getElementById("-hbar-1").style.display =
-                "block";
-            document.getElementById(digitId + "-hbar-2").style.display =
-                "block";
-            document.getElementById(digitId + "-hbar-3").style.display =
-                "block";
-            document.getElementById(digitId + "-vbar-1").style.display =
-                "block";
-            document.getElementById(digitId + "-vbar-2").style.display =
-                "block";
-            document.getElementById(digitId + "-vbar-3").style.display =
-                "block";
-            document.getElementById(digitId + "-vbar-4").style.display =
-                "block";
+    testDigit('hour-1');
+    testDigit('hour-2');
+    testDigit('minute-1');
+    testDigit('minute-2');
+    testDigit('second-1');
+    testDigit('second-2');
 }
 
 /* 
@@ -50,7 +42,7 @@ function testClock() {
 */
 
 function testDigit(digitId) {
-    drawDigit(digitId, 9);
+    drawDigit(digitId, 8);
 }
 
 /*
@@ -244,17 +236,16 @@ function drawClock() {
 
     if(minutes < 10) {
         drawDigit('minute-1', 0);
-        drawDigit('minutes-2', minutesDigits[0]);
+        drawDigit('minute-2', minutesDigits[0]);
     } else {
-        drawDigit('minutes-1', minutesDigits[0]);
-        drawDigit('minutes-2', minutesDigits[1]);
+        drawDigit('minute-1', minutesDigits[0]);
+        drawDigit('minute-2', minutesDigits[1]);
     }
 
     let hours = now.getHours(); // De seconden opvragen
     let hoursDigits = digitsOf(hours); // Maakt een array van getallen van de seconden.
 
     if(hours < 10) {
-        drawDigit('hour-1', 0);
         drawDigit('hour-2', hoursDigits[0]);
     } else {
         drawDigit('hour-1', hoursDigits[0]);
