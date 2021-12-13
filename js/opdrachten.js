@@ -75,7 +75,7 @@ function changeBackgroundColor(){
 
 
 /*
-    Opdracht 3 extra - Change all tag backgroundcolor
+    Opdracht 3 EXTRA - Change all tag backgroundcolor
 
     Maak de functie changeTagElementsStyle met de argumenten, tag en color
         Maak de variabel elements aan, geef deze de waarde alle elementen met de tagname van tag. (de variabel elements is nu een array met alle elementen met de tag die mee gegeven word in het ergument)

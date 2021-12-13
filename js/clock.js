@@ -42,8 +42,7 @@
     Stap 4.
     
     Schrijf de functie resetClock().
-        - Deze functie moet alle 'bars' uitzetten (.style.display='none') 
-          en als eerst aangeroepen worden door drawClock.
+        - Deze functie moet alle 'bars' uitzetten (.style.display='none').
 */
 
 
@@ -52,6 +51,7 @@
 
     Schrijf de functie drawClock()
         - Deze functie moet elke 1s worden aangeroepen (vanuit startClock())
+        - Deze functie roept als eerste aan: resetClock()
         - Zet hierin de volgende regels code:
             let now = new Date(); // Het huidige tijdstip opvragen
             let seconds = now.getSeconds(); // De seconden opvragen
@@ -77,6 +77,12 @@
 */
 
 
+/*
+    Stap 8
+
+    Laat de seperators knipperen (1s aan / 1s uit).
+*/
+
 
 
 /**
@@ -85,6 +91,6 @@
  * @returns Array<Number>
  */
  function digitsOf(number) {
-    return number.toString().split('').map((digit) => parseInt(digit))
+    return number.toString().split('').map((digit) => parseInt(digit));
 }
 
