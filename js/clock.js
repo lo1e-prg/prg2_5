@@ -112,12 +112,14 @@ function drawCrystal(idPrefix, bar) {
 }
 
 function startClock() {
-    drawDigit("hour-1", 0);
-    drawDigit("hour-2", 0);
-    drawDigit("minute-1", 0);
+    drawDigit("hour-1", 1);
+    drawDigit("hour-2", 6);
+    drawDigit("minute-1", 2);
     drawDigit("minute-2", 0);
     drawDigit("second-1", 0);
     drawDigit("second-2", 0);
+
+    setTimeout(resetDigits, 100)
 
     setInterval(drawClock, 1000);
 }
