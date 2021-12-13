@@ -10,6 +10,8 @@
     RESULTAAT: 88:88:88
 */
 
+
+
 /* 
     Stap 2.
 
@@ -20,14 +22,11 @@
         - De ID's van de strepen zijn bijvoorbeeld: 'hour-1-hbar-1', 'hour-1-vbar-1'
         - er zijn 3 hbars en 4 vbars.
 
-    Gebruik deze functie in testDigits ipv de code uit stap 1.
+    Gebruik deze functie in testDigit ipv de code uit stap 1.
 
     RESULTAAT: 88:88:88
 */
 
-/*
-    
-*/
 
 /*
     Stap 3.
@@ -42,7 +41,7 @@
     Stap 4.
     
     Schrijf de functie resetClock().
-        - Deze functie moet alle 'bars' uitzetten (.style.display='none').
+        - Deze functie moet alle 'bar' uitzetten (.style.display='none').
 */
 
 
@@ -56,7 +55,7 @@
             let now = new Date(); // Het huidige tijdstip opvragen
             let seconds = now.getSeconds(); // De seconden opvragen
             let secondsDigits = digitsOf(seconds); // Maakt een array van getallen van de seconden.
-        - Toon de digits in de Array secondsDigits bij 'second-1' en 'second-2' (als < 10 toon dan een 0 voor second-1)
+        - Toon de digits in de Array secondsDigits bij 'second-1' en 'second-2' (als seconds < 10 toon dan een 0 voor second-1)
             (gebruik drawDigit() hiervoor)
 
 */
@@ -65,7 +64,8 @@
     Stap 6.
     
     Zorg dat ook de uren en minuten getoond worden in drawClock
-        - Toon geen 0 bij uren in de eerste digit als de uren < 10
+        - Toon een 0 bij minuten in de eerste digit als de minuten < 10
+        - Toon een 0 bij uren in de eerste digit als de uren < 10
 */
 
 /*
