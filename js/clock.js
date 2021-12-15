@@ -10,7 +10,61 @@
     RESULTAAT: 88:88:88
 */
 
+function startClock() {
+    testClock();
+}
 
+window.addEventListener("load", startClock);
+
+function testClock() {
+    document.getElementById("hour-1-hbar-1").style.display = "block";
+    document.getElementById("hour-1-hbar-2").style.display = "block";
+    document.getElementById("hour-1-hbar-3").style.display = "block";
+    document.getElementById("hour-1-vbar-1").style.display = "block";
+    document.getElementById("hour-1-vbar-2").style.display = "block";
+    document.getElementById("hour-1-vbar-3").style.display = "block";
+    document.getElementById("hour-1-vbar-4").style.display = "block";
+
+    document.getElementById("hour-2-hbar-1").style.display = "block";
+    document.getElementById("hour-2-hbar-2").style.display = "block";
+    document.getElementById("hour-2-hbar-3").style.display = "block";
+    document.getElementById("hour-2-vbar-1").style.display = "block";
+    document.getElementById("hour-2-vbar-2").style.display = "block";
+    document.getElementById("hour-2-vbar-3").style.display = "block";
+    document.getElementById("hour-2-vbar-4").style.display = "block";
+    
+    document.getElementById("minute-1-hbar-1").style.display = "block";
+    document.getElementById("minute-1-hbar-2").style.display = "block";
+    document.getElementById("minute-1-hbar-3").style.display = "block";
+    document.getElementById("minute-1-vbar-1").style.display = "block";
+    document.getElementById("minute-1-vbar-2").style.display = "block";
+    document.getElementById("minute-1-vbar-3").style.display = "block";
+    document.getElementById("minute-1-vbar-4").style.display = "block";
+
+    document.getElementById("minute-2-hbar-1").style.display = "block";
+    document.getElementById("minute-2-hbar-2").style.display = "block";
+    document.getElementById("minute-2-hbar-3").style.display = "block";
+    document.getElementById("minute-2-vbar-1").style.display = "block";
+    document.getElementById("minute-2-vbar-2").style.display = "block";
+    document.getElementById("minute-2-vbar-3").style.display = "block";
+    document.getElementById("minute-2-vbar-4").style.display = "block";
+
+    document.getElementById("second-1-hbar-1").style.display = "block";
+    document.getElementById("second-1-hbar-2").style.display = "block";
+    document.getElementById("second-1-hbar-3").style.display = "block";
+    document.getElementById("second-1-vbar-1").style.display = "block";
+    document.getElementById("second-1-vbar-2").style.display = "block";
+    document.getElementById("second-1-vbar-3").style.display = "block";
+    document.getElementById("second-1-vbar-4").style.display = "block";
+
+    document.getElementById("second-2-hbar-1").style.display = "block";
+    document.getElementById("second-2-hbar-2").style.display = "block";
+    document.getElementById("second-2-hbar-3").style.display = "block";
+    document.getElementById("second-2-vbar-1").style.display = "block";
+    document.getElementById("second-2-vbar-2").style.display = "block";
+    document.getElementById("second-2-vbar-3").style.display = "block";
+    document.getElementById("second-2-vbar-4").style.display = "block";
+}
 
 /* 
     Stap 2.
