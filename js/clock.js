@@ -182,7 +182,18 @@ function resetDigit(digitId) {
 
 function drawClock() {
     resetClock();
+    
+    let now = new Date(); // Het huidige tijdstip opvragen
+    let seconds = now.getSeconds(); // De seconden opvragen
+    let secondsDigits = digitsOf(seconds); // Maakt een array van getallen van de seconden.
 
+    if(seconds < 10) {
+        drawDigit('second-1', 0);
+        drawDigit('second-2', secondsDigits[0]);
+    } else {
+        drawDigit('second-1', secondsDigits[0]);
+        drawDigit('second-2', secondsDigits[1]);
+    }
 }
 
 /*
