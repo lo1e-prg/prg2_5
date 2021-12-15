@@ -41,7 +41,7 @@ function testClock() {
 */
 
 function testDigit(digitId) {
-    drawDigit(digitId, 0);
+    drawDigit(digitId, 8);
 }
 
 
