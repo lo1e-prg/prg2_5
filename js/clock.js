@@ -205,6 +205,17 @@ function drawClock() {
         drawDigit('minute-1', minutesDigits[0]);
         drawDigit('minute-2', minutesDigits[1]);
     }
+
+    let hours = now.getHours(); // De uren opvragen
+    let hoursDigits = digitsOf(hours); // Maakt een array van getallen van de uren.
+
+    if(hours < 10) {
+        drawDigit('hour-1', 0);
+        drawDigit('hour-2', hoursDigits[0]);
+    } else {
+        drawDigit('hour-1', hoursDigits[0]);
+        drawDigit('hour-2', hoursDigits[1]);
+    }
 }
 
 /*
