@@ -41,7 +41,7 @@ function testClock() {
 */
 
 function testDigit(digitId) {
-    drawDigit(digitId, 6);
+    drawDigit(digitId, 7);
 }
 
 
@@ -101,6 +101,12 @@ function drawDigit(digitId, digit) {
             document.getElementById(digitId + "-vbar-4").style.display = "block";
             break;
 
+        case 7:
+            document.getElementById(digitId + "-hbar-1").style.display = "block";
+            document.getElementById(digitId + "-vbar-2").style.display = "block";
+            document.getElementById(digitId + "-vbar-4").style.display = "block";
+            break;
+                
         case 8:
             document.getElementById(digitId + "-hbar-1").style.display = "block";
             document.getElementById(digitId + "-hbar-2").style.display = "block";
