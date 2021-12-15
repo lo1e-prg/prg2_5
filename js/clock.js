@@ -146,22 +146,11 @@ function drawDigit(digitId, digit) {
 */
 
 function resetClock() {
-    resetDigit('hour-1');
-    resetDigit('hour-2');
-    resetDigit('minute-1');
-    resetDigit('minute-2');
-    resetDigit('second-1');
-    resetDigit('second-2');
-}
+    let bars = document.getElementsByClassName('bar');
 
-function resetDigit(digitId) {
-    document.getElementById(digitId + "-hbar-1").style.display = "none";
-    document.getElementById(digitId + "-hbar-2").style.display = "none";
-    document.getElementById(digitId + "-hbar-3").style.display = "none";
-    document.getElementById(digitId + "-vbar-1").style.display = "none";
-    document.getElementById(digitId + "-vbar-2").style.display = "none";
-    document.getElementById(digitId + "-vbar-3").style.display = "none";
-    document.getElementById(digitId + "-vbar-4").style.display = "none";
+    for(let index = 0; index < bars.length; index++) {
+        bars[index].style.display = "none";
+    }
 }
 
 
