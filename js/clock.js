@@ -41,13 +41,7 @@ function testClock() {
 */
 
 function testDigit(digitId) {
-    document.getElementById(digitId + "-hbar-1").style.display = "block";
-    document.getElementById(digitId + "-hbar-2").style.display = "block";
-    document.getElementById(digitId + "-hbar-3").style.display = "block";
-    document.getElementById(digitId + "-vbar-1").style.display = "block";
-    document.getElementById(digitId + "-vbar-2").style.display = "block";
-    document.getElementById(digitId + "-vbar-3").style.display = "block";
-    document.getElementById(digitId + "-vbar-4").style.display = "block";
+    drawDigit(digitId, 8);
 }
 
 
@@ -59,6 +53,20 @@ function testDigit(digitId) {
         - Gebruik hierbij een switch statement om de verschillende digits af te handelen.
         - Herschrijf testDigit(digitId) zodat deze de functie drawDigit gebruikt.
 */
+
+function drawDigit(digitId, digit) {
+    switch(digit) {
+        case 8:
+            document.getElementById(digitId + "-hbar-1").style.display = "block";
+            document.getElementById(digitId + "-hbar-2").style.display = "block";
+            document.getElementById(digitId + "-hbar-3").style.display = "block";
+            document.getElementById(digitId + "-vbar-1").style.display = "block";
+            document.getElementById(digitId + "-vbar-2").style.display = "block";
+            document.getElementById(digitId + "-vbar-3").style.display = "block";
+            document.getElementById(digitId + "-vbar-4").style.display = "block";
+            break;
+    }
+}
 
 /*
     Stap 4.
