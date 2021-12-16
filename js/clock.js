@@ -12,6 +12,7 @@
 
 function startClock() {
     testClock();
+    setInterval(drawClock, 1000);
 }
 
 window.addEventListener("load", startClock);
@@ -178,6 +179,11 @@ function resetDigit(digitId) {
             (gebruik drawDigit() hiervoor)
 
 */
+
+function drawClock() {
+    resetClock();
+
+}
 
 /*
     Stap 6.
