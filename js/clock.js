@@ -171,6 +171,7 @@ function resetClock() {
 
 function drawClock() {
     resetClock();
+    blinkSeperators();
 
     let now = new Date(); // Het huidige tijdstip opvragen
     let seconds = now.getSeconds(); // De seconden opvragen
@@ -230,6 +231,17 @@ function drawClock() {
     Laat de seperators knipperen (1s aan / 1s uit).
 */
 
+function blinkSeperators() {
+    let seperators = document.getElementsByClassName('dot');
+    
+    for(let index = 0; index < seperators.length; index++) {
+        if(seperators[index].style.display == 'none') {
+            seperators[index].style.display = 'block';
+        } else {
+            seperators[index].style.display = 'none';
+        }
+    }
+}
 
 
 /**
